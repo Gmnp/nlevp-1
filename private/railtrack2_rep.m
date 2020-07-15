@@ -37,11 +37,11 @@ function [coeffs,fun,F,xcoeffs] = railtrack2_rep(n,omega)
 %
 %  T.-M. Huang, W.-W. Lin and J. Qian, Structure-preserving algorithms
 %  for palindromic quadratic eigenvalue problems arising from vibration on fast 
-%  trains, SIAM J. Matrix Anal. Appl., 30(4):1566–1592, 2008.
+%  trains, SIAM J. Matrix Anal. Appl., 30(4):1566ï¿½1592, 2008.
 %
 %  C.-H. Guo and W.-W. Lin, Solving a structured quadratic eigenvalue
 %  problem by a structure-preserving doubling algorithm. 
-%  SIAM J. Matrix Anal. Appl., 31(5):2784–2801, 2010.
+%  SIAM J. Matrix Anal. Appl., 31(5):2784ï¿½2801, 2010.
 
 % Default values.
 if nargin < 1 || isempty(n)
@@ -57,7 +57,13 @@ end
 dim = round(n/705);
 % n = dim*705;
 
-if dim <= 1, error('N must be at least 1410.'), end
+
+if dim <= 1
+    warning('N must be at least 1410. N is now 1410');
+dim = 2;
+n = 1410;
+end
+
 
 K0 = 0; K1 = 0; M0 = 0; M1 = 0; % Just to prevent lint-warnings.
 

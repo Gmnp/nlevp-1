@@ -11,8 +11,9 @@ function [coeffs,fun,F,xcoeffs] = photonic_crystal(N, wavevec, eps0, eps1, loren
 %  is given by the Lorentz model
 %  eps1(lambda) = EPS1 + sum(lambdaP.^2 ./ (lambda0.^2 - lambda^2 - I*gamma*lambda)),
 %  whose coefficients are collected in LORENTZ = [lambdaP.^2; lambda0.^2; gamma].
-%  The default values are N = 0, WAVEVEC = [0; 0], EPS0 = 1 for vacuum, and
-%  EPS1 = 2, LORENTZ = [[2.5; 1.4; 0.001], [5; 1.6; 0.02]].
+%  The default values are N = 288, WAVEVEC = [0; 0], EPS0 = 1 for vacuum, and
+%  EPS1 = 2, LORENTZ = [[2.5; 1.4; 0.001], [5; 1.6; 0.02]]. N can take the
+%  values {288, 720, 1344, 2160}.
 %  The coefficient matrices are returned as the cell array COEFFS = {G, M0, M1}.
 %  FUN is a function handle to evaluate the corresponding scalar functions 1,
 %  -lambda^2*EPS0, and -lambda^2*eps1(lambda) as well as their derivatives.
@@ -20,16 +21,16 @@ function [coeffs,fun,F,xcoeffs] = photonic_crystal(N, wavevec, eps0, eps1, loren
 %  XCOEFFS is the cell {1, 1, L1; coeffs{1}, coeffs{2}, R1'} that exploits
 %  the low rank of M1.
 %  This problem has the properties rep, symmetric, sparse,
-%  parameter-dependent, low-rank.
+%  parameter-dependent, scalable, low-rank.
 
 %  References:
-%  C. Effenberger, D. Kressner, and C. Engström. Linearization techniques 
+%  C. Effenberger, D. Kressner, and C. Engstrï¿½m. Linearization techniques 
 %  for band structure calculations in absorbing photonic crystals. 
-%  Internat. J. Numer. Methods Engrg., 89(2):180–191, 2012.
+%  Internat. J. Numer. Methods Engrg., 89(2):180ï¿½191, 2012.
 %
 %  C. Engstrom and M. Wang, M. 2010. Complex dispersion relation
 %  calculations with the symmetric interior penalty method. 
-%  Internat. J. Numer. Methods Engrg., 84(7):849–863, 2010.
+%  Internat. J. Numer. Methods Engrg., 84(7):849ï¿½863, 2010.
 
 %  Function supplied by Daniel Kressner and Cedric Effenberger.
 
