@@ -116,7 +116,7 @@ function varargout = nlevp(name,varargin)
 %  relative_pose_6pt  QEP from relative pose problem in computer vision.
 %  sandwich_beam      NEP from model of a clamped sandwich beam.
 %  schrodinger        QEP from Schrodinger operator.
-%  schrodinger_nep    N-by-N NEP from a Schroedinger equation
+%  schrodinger_abc    NEP from Schrodinger equation with absorbing boundary condition.
 %  shaft              QEP from model of a shaft on bearing supports with a
 %                     damper.
 %  sign1              QEP from rank-1 perturbation of sign operator.
@@ -130,7 +130,7 @@ function varargout = nlevp(name,varargin)
 %  surveillance       27-by-20 QEP from surveillance camera callibration.
 %  time_delay         3-by-3 NEP from a time-delay system.
 %  time_delay2        2-by-2 NEP from a time-delay system.
-%  time_delay3        n-by-n NEP with high-variance-norm coefficients.
+%  time_delay3        NEP with high-variance-norm coefficients.
 %  utrecht1331        QEP  1331-by-1331 QEP with singular A1.
 %  wing               3-by-3 QEP from analysis of oscillations of a wing in
 %                     an airstream.

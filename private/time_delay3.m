@@ -1,5 +1,5 @@
 function [coeffs, fun, F] = time_delay3(n,k)
-%TIME_DELAY3    n-by-n NEP with high-variance-norm coefficients.
+%TIME_DELAY3   NEP with high-variance-norm coefficients.
 %   [COEFFS,FUN,F] = nlevp('time_delay3', n, k) generates a n-by-n
 %   nonlinear matrix function lambda*EYE(n) +
 %   \sum_{j=1}^{k}exp(-lambda*tau_j)A_j, where A_j are random matrices and

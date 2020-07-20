@@ -5,7 +5,6 @@ function [coeffs,fun,F,xcoeffs] = railtrack2_rep(n,omega)
 %  DIM*705, where DIM > 1 is chosen so that DIM*705 is as close as
 %  possible to N, defined by
 %  R(lam)*x = (lam*A2 + A1 + A0/lam)*x = 0.
-%  DIM is chosen such that DIM*705 approximates N.
 %  A0, A1, A2 have the form
 %               |  0   0   H1  |
 %          A0 = |  0   0   0   | = A2.'
@@ -19,7 +18,7 @@ function [coeffs,fun,F,xcoeffs] = railtrack2_rep(n,omega)
 %  where H0 and H1 are 705-by-705 complex matrices depending on OMEGA.
 %  The defaults are N = 51*705, OMEGA = 1000.
 %  The matrices are returned in a cell array: COEFFS = {A0, A1, A2}.
-%  Notice that this is the rational formulation of nlevp('railtrack').
+%  Notice that this is the rational formulation of nlevp('railtrack2').
 %  FUN is a function handle to evaluate the monomials \lambda^{-1}, 1, lambda,
 %  and their derivatives.
 %  F is the function handle lam*A2 + A1 + A0/lam.
