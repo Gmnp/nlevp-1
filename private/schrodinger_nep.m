@@ -1,6 +1,6 @@
 function [coeffs, fun, F] = schrodinger_nep(n, alpha)
-%SCHRODINGERnep   N-by-N NEP from a Schroedinger equation
-% [coeffs, fun, F] = nlevp('schrodingernep', N, alpha) generates the N-by-N
+%SCHRODINGER_NEP   N-by-N NEP from a Schroedinger equation
+% [coeffs, fun, F] = nlevp('SCHRODINGER_NEP', N, alpha) generates the N-by-N
 % nonlinear matrix function A - lam*I + g(lam)*B1 + f(lam)*B2, which
 % iderives from the discretization of a boundary value problem from a
 % Schroedinger equation. The potential function V(z) is defined as
@@ -20,15 +20,15 @@ function [coeffs, fun, F] = schrodinger_nep(n, alpha)
 % The problem has the properties nep, real, scalable, sparse,
 % parameter-dependent, tridiagonal, banded.
 
-% References: Problem from  NEP-Pack Library: "NEP-PACK: A Julia package
-% for nonlinear eigenproblems", E. Jarlebring and M. Bennedich and G. Mele 
-% and E. Ringh and P. Upadhyaya, 2018, arXiv:1811.09592. Available at
-% https://github.com/nep-pack.
+% References: Problem taken from Tutorial 1 (ABC), NEP-Pack Library:
+% "NEP-PACK: A Julia package for nonlinear eigenproblems", E. Jarlebring
+% and M. Bennedich and G. Mele and E. Ringh and P. Upadhyaya, 2018,
+% arXiv:1811.09592. Available at https://github.com/nep-pack.
 
 if nargin < 1 || isempty(n)
     n = 20;
 end
-if nargin < n || isempty(alpha)
+if nargin < 2 || isempty(alpha)
     alpha  = 25*pi/2;
 end
 

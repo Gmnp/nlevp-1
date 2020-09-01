@@ -116,6 +116,7 @@ X = add_problem(X,'mirror','pep','real','random');
 X = add_problem(X,'mobile_manipulator','pep','qep','real');
 X = add_problem(X,'nep1','nep');
 X = add_problem(X,'nep2','nep');
+X = add_problem(X, 'nep3', 'nep', 'scalable', 'parameter-dependent');
 X = add_problem(X,'neuron_dde','nep', 'real', 'parameter-dependent');
 X = add_problem(X,'omnicam1','pep','qep','real');
 X = add_problem(X,'omnicam2','pep','qep','real');
@@ -167,6 +168,7 @@ X = add_problem(X,'spring','pep','qep','real','symmetric',...
                   'scalable','sparse', 'tridiagonal', 'banded');
 X = add_problem(X,'spring_dashpot','pep','qep','real','parameter-dependent',...
                   'scalable','sparse','random', 'low-rank');
+X = add_problem(X,'square_root','nep', 'real', 'sparse');
 X = add_problem(X,'surveillance','pep','qep','real','nonsquare','nonregular');
 X = add_problem(X,'time_delay','nep', 'real');
 X = add_problem(X,'time_delay2','nep', 'real', 'parameter-dependent');

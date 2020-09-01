@@ -90,6 +90,7 @@ function varargout = nlevp(name,varargin)
 %  mobile_manipulator QEP from model of 2-dimensional 3-link mobile manipulator.
 %  nep1               2-by-2 basic NEP example.
 %  nep2               3-by-3 basic NEP example.
+%  nep3               NEP with weighted norm coefficients.
 %  neuron_dde         2-by-2 NEP from a neural-network DDE.
 %  omnicam1           9-by-9 QEP from model of omnidirectional camera.
 %  omnicam2           15-by-15 QEP from model of omnidirectional camera.
@@ -127,6 +128,7 @@ function varargout = nlevp(name,varargin)
 %  spring             QEP from finite element model of damped mass-spring
 %                     system.
 %  spring_dashpot     QEP from model of spring/dashpot configuration.
+%  square_root        Square root of a skew-symmetric matrix.
 %  surveillance       27-by-20 QEP from surveillance camera callibration.
 %  time_delay         3-by-3 NEP from a time-delay system.
 %  time_delay2        2-by-2 NEP from a time-delay system.
