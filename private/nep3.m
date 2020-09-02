@@ -1,11 +1,12 @@
-function [coeffs, fun, F] = nep3(n, weight)
+function [coeffs, fun, F] = nep3(n, weight, myseed)
 %  NEP3   NEP with weighted norm coefficients.
-%   [COEFFS,FUN,F] = nlevp('nep3', n, weight) generates an n-by-n
+%   [COEFFS,FUN,F] = nlevp('nep3', n, weight, myseed) generates an n-by-n
 %   nonlinear matrix function F(lambda) = lambda*EYE(n) + A_0 +
 %   exp(21*lambda)*A_1 * (lam+4).^0.5*A_2. The matrices A_j are uniformly
 %   random distributed with unitary Frobenius norm, except for A_1, whose
-%   norm is equal to weight. The default values are n = 10, weight = 1e6.
-%   This problem has the properties nep, scalable,  parameter-dependent. 
+%   norm is equal to weight. The default values are n = 10, weight = 1e6,
+%   myseed = 42. This problem has the properties nep, scalable,
+%   parameter-dependent, random.
 
 %  Reference: "Created by F. Tisseur, G.M. Negri Porzio"
 
@@ -16,10 +17,14 @@ if nargin < 2 || isempty(weight)
     weight = 1e6;
 end
 
+if nargin < 3 || isempty(myseed)
+    myseed = 42;
+end
+
 % Save the current rng state
 state = rng;
-% Set a standard rng
-rng(42);
+% Set the wanted rng
+rng(myseed);
 
 coeffs = cell(1,3);
 coeffs{1} = eye(n);
