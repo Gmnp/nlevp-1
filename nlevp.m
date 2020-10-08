@@ -55,7 +55,7 @@ function varargout = nlevp(name,varargin)
 %  bent_beam          6-by-6 NEP from a bent beam model.
 %  bicycle            2-by-2 QEP from the Whipple bicycle model.
 %  bilby              5-by-5 QEP from Bilby population model.
-%  bucking_plate      3-by-3 NEP from a bucking plate model.
+%  bucking_plate      3-by-3 NEP from a buckling plate model.
 %  butterfly          Quartic matrix polynomial with T-even structure.
 %  canyon_particle    NEP from the Schrödinger equation on a canyon-like shape.
 %  cd_player          QEP from model of CD player.

@@ -1,7 +1,7 @@
 function [coeffs, fun, F] = square_root()
 %  SQUARE_ROOT   Square root of a skew-symmetric matrix.
 %   [COEFFS,FUN,F] = nlevp('square_root') generates a 20-by-20
-%   nonlinear matrix function F(lambda) = lambda*I -z^(1/2)*A. The matrix A
+%   nonlinear matrix function F(lambda) = A -lambda^(1/2)*I. The matrix A
 %   is skew-symmetric and its eigenvalues lie in [4-40i, 4+40i]. The
 %   eigenvalues of F(z) are their square roots.
 %   This problem has the properties nep, real, sparse. 
@@ -15,8 +15,8 @@ A = 10*gallery('tridiag', 10);
 S = 4*speye(10);
 A = [ S , A ; -A , S ];
 coeffs = cell(1,2);
-coeffs{1} = speye(20);
-coeffs{2} = A;
+coeffs{1} = A;
+coeffs{2} = speye(20);
 fun = @(lam) square_root_fun(lam);
 F = @(lam) coeffs{1} - sqrt(lam)*coeffs{2};
 
