@@ -13,7 +13,7 @@ function [coeffs,fun,F,xcoeffs] = schrodinger_abc(n)
 %  XCOEFFS is the cell {1, 1, en, en; A, B, en', u} to exploit the low rank
 %  of G and H.
 %
-%  This problem has the properties nep, sparse, banded,
+%  This problem has the properties nep, real, sparse, banded,
 %  low-rank, scalable.
 
 % References: Problem taken from Tutorial 1 (ABC), NEP-Pack Library:

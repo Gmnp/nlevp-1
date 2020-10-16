@@ -9,7 +9,7 @@ function [coeffs, fun, F] = time_delay3(n,k,myseed)
 %   evaluate the functions lambda, exp(-lambda*tau_1), ...,
 %   exp(-lambda*tau_k) and their derivatives. F is the function handle
 %   lambda*EYE(n) + \sum_{j=1}^{k}exp(-lambda*tau_j)A_j. This problem has
-%   the properties nep, real, scalable parameter-dependent, random.
+%   the properties nep, real, scalable, parameter-dependent, random.
 
 %  Reference: "Created by F. Tisseur"
 

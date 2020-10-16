@@ -1,5 +1,5 @@
 function [coeffs, fun, F] = square_root()
-%  SQUARE_ROOT   Square root of a skew-symmetric matrix.
+%SQUARE_ROOT   Square root of a skew-symmetric matrix.
 %   [COEFFS,FUN,F] = nlevp('square_root') generates a 20-by-20
 %   nonlinear matrix function F(lambda) = A -lambda^(1/2)*I. The matrix A
 %   is skew-symmetric and its eigenvalues lie in [4-40i, 4+40i]. The

@@ -1,5 +1,5 @@
 function [coeffs, fun, F] = nep3(n, weight, myseed)
-%  NEP3   NEP with weighted norm coefficients.
+%NEP3   NEP with weighted norm coefficients.
 %   [COEFFS,FUN,F] = nlevp('nep3', n, weight, myseed) generates an n-by-n
 %   nonlinear matrix function F(lambda) = lambda*EYE(n) + A_0 +
 %   exp(21*lambda)*A_1 * (lam+4).^0.5*A_2. The matrices A_j are uniformly
@@ -8,7 +8,7 @@ function [coeffs, fun, F] = nep3(n, weight, myseed)
 %   myseed = 42. This problem has the properties nep, scalable,
 %   parameter-dependent, random.
 
-%  Reference: "Created by F. Tisseur, G.M. Negri Porzio"
+%  References: "Created by F. Tisseur, G.M. Negri Porzio"
 
 if nargin < 1 || isempty(n)
     n = 10;
